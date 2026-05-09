@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Outliner</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">CSS Outliner</h1>
+    <label class="switch" title="Toggle outlines on this tab">
+      <input type="checkbox" id="master-toggle" />
+      <span class="switch-slider"></span>
+    </label>
+  </header>
+
+  <section class="controls">
+    <div class="row">
+      <label for="width-input" class="row-label">Width</label>
+      <input type="range" id="width-input" min="1" max="5" step="1" value="1" />
+      <span id="width-value" class="row-value">1px</span>
+    </div>
+    <div class="row">
+      <label for="mode-input" class="row-label">Style</label>
+      <select id="mode-input" class="select">
+        <option value="outline">outline</option>
+        <option value="border">border</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="tags" id="tags-list" aria-label="Element selectors"></section>
+
+  <footer class="footer">
+    <button id="reset-button" class="button" type="button">Reset defaults</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
